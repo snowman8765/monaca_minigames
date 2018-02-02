@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Monacanoid</title>
+    <meta name="viewport" content="target-densitydpi=device-dpi,width=320,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="components/loader.js"></script>
+    <script src="js/lib/pixi.min.js"></script>
+    <script src="js/monaca.common.js"></script>
+    <script src="js/Game.js"></script>
+    <script>
+      var miniGame = null;
+      window.onload = function() {
+        miniGame = new snowman8765.jsMiniGames.Game(256, 256);
+        if(getUa() === false) miniGame.init();
+        else document.addEventListener("deviceready", init, false);
+      }
+    </script>
+</head>
+<body>
+</body>
+</html>
